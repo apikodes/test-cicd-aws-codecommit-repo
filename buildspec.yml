@@ -9,6 +9,7 @@ phases:
             - echo "installing 1"
             - echo "added this line after creating a stack in NV region 'dev1-5-github-codebuild-project'"
             - echo "added this line after creating a stack in NV region 'dev1-7-github-codebuild-project'"
+            - echo "added this line after creating a stack in NV region testing 3rd line 'dev1-7-github-codebuild-project'"
     pre_build:
         commands: 
             - echo "we are in the pre build phase"
