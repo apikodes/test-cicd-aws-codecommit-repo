@@ -5,6 +5,12 @@ phases:
         runtime-versions:
             nodejs: 10
         commands:
+            - echo $CODEBUILD_SOURCE_REPO_URL
+            - |
+                REPOSITORY=$(echo "$CODEBUILD_SOURCE_REPO_URL" | cut -d '/' -f 5 | cut -d '.' -f 1)
+                Owner=$(echo "$CODEBUILD_SOURCE_REPO_URL" | cut -d '/' -f 4)
+            - echo "REPOSITORY the AWS resources for $REPOSITORY"
+            - echo "Owner the AWS resources for $Owner"
             - echo "installing something"
             - echo "installing 1"
             - echo "added this line after creating a stack in NV region 'dev1-5-github-codebuild-project'"
